@@ -23,7 +23,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background-color: var(--background);
             color: var(--on-surface);
-            line-height: 1.6;
+            line-height: 1.8;
             padding: 20px;
         }
         
@@ -61,6 +61,7 @@
         .last-updated {
             color: #888;
             font-size: 0.9em;
+            margin-top: 5px;
         }
         
         h2 {
@@ -81,7 +82,7 @@
             margin-bottom: 15px;
         }
         
-        ul {
+        ul, ol {
             margin: 15px 0;
             padding-left: 25px;
         }
@@ -128,6 +129,27 @@
             font-weight: bold;
         }
         
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #444;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: rgba(103, 80, 164, 0.3);
+            color: var(--primary);
+        }
+        
+        td {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        
         footer {
             text-align: center;
             margin-top: 60px;
@@ -153,6 +175,14 @@
             .container {
                 padding: 10px;
             }
+            
+            table {
+                font-size: 0.85em;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
         }
     </style>
 </head>
@@ -161,176 +191,470 @@
         <header>
             <div class="logo">🛡️</div>
             <h1>NoLog VPN</h1>
-            <p>Privacy Policy</p>
-            <p class="last-updated">Last Updated: February 1, 2026</p>
+            <p><strong>Privacy Policy</strong></p>
+            <p class="last-updated">Effective Date: February 13, 2026</p>
+            <p class="last-updated">Last Updated: February 13, 2026</p>
         </header>
         
         <main>
             <div class="highlight-box">
                 <strong>Our Promise:</strong> NoLog VPN is built on a "can't log" architecture, not just "won't log" promises. 
-                We've designed our system so that logging your activity is technically impossible.
+                We have designed our system so that logging your activity is technically impossible through Sentinel's 
+                decentralized VPN protocol.
             </div>
             
+            <!-- Section 1: Introduction -->
             <h2>1. Introduction</h2>
             <p>
-                NoLog VPN ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy 
-                explains our data practices for the NoLog VPN application ("App"), built on the Sentinel 
-                decentralized VPN network.
+                This Privacy Policy describes how NoLog VPN ("we", "our", "us", or "the App"), developed and published 
+                by Bumin Altinbay ("Developer"), collects, uses, shares, and protects information when you use the 
+                NoLog VPN application available on Google Play Store.
             </p>
             <p>
-                By using NoLog VPN, you agree to the practices described in this policy.
+                NoLog VPN is a decentralized VPN (dVPN) application built on the 
+                <a href="https://sentinel.co">Sentinel Protocol</a>, providing secure and private internet access 
+                through community-operated VPN nodes using WireGuard encryption.
+            </p>
+            <p>
+                By downloading, installing, or using NoLog VPN, you acknowledge that you have read and understood 
+                this Privacy Policy and agree to its terms. If you do not agree with this Policy, please do not use the App.
             </p>
             
-            <h2>2. Our "Can't Log" Architecture</h2>
+            <!-- Section 2: Architecture -->
+            <h2>2. Our Decentralized "Can't Log" Architecture</h2>
             <p>
-                Unlike traditional VPNs that promise not to log, NoLog VPN uses Sentinel's decentralized 
+                Unlike traditional VPN services that promise not to log, NoLog VPN leverages Sentinel's decentralized 
                 architecture where comprehensive logging is technically impossible:
             </p>
             <ul class="check-list">
-                <li>No single entity controls the entire network</li>
-                <li>Node operators only see encrypted traffic</li>
-                <li>No central server stores connection data</li>
-                <li>Even if one node is compromised, they only have partial, encrypted data</li>
+                <li>No single entity controls the entire network — there is no central server that processes all traffic</li>
+                <li>Node operators can only see encrypted traffic passing through their node — not the content</li>
+                <li>No central server stores connection metadata, browsing data, or user activity</li>
+                <li>VPN traffic is encrypted using WireGuard (ChaCha20-Poly1305) end-to-end</li>
+                <li>Even if an individual node were compromised, only partial, encrypted data fragments exist</li>
             </ul>
             
-            <h2>3. Information We DO NOT Collect</h2>
-            <p>We do not collect, store, or process:</p>
+            <!-- Section 3: Info NOT Collected -->
+            <h2>3. Information We Do NOT Collect</h2>
+            <p>We do <strong>not</strong> collect, store, transmit, or process the following data:</p>
             <ul class="cross-list">
-                <li>Your real IP address</li>
-                <li>Browsing history or website visits</li>
-                <li>DNS queries</li>
-                <li>Connection timestamps with user identifiers</li>
-                <li>Personal information (name, email, phone)</li>
-                <li>Device identifiers or advertising IDs</li>
-                <li>Location data</li>
-                <li>Application usage patterns</li>
+                <li>Your originating (real) IP address</li>
+                <li>Browsing history, website visits, or URLs accessed</li>
+                <li>DNS queries or resolutions</li>
+                <li>Connection timestamps linked to user identifiers</li>
+                <li>Content of your internet traffic</li>
+                <li>Personal information such as name, email address, or phone number</li>
+                <li>Location data (GPS, cell tower, or Wi-Fi based)</li>
+                <li>Application usage patterns or installed app inventory</li>
             </ul>
             
-            <h2>4. Information Stored on Blockchain</h2>
+            <!-- Section 4: Data We Collect -->
+            <h2>4. Information We Collect and How We Use It</h2>
             <p>
-                The Sentinel blockchain stores only the minimum data required for fair bandwidth billing:
+                The following table describes the limited data processed by the App, the purpose, and the storage location:
             </p>
-            <ul>
-                <li><strong>Bandwidth Used:</strong> Total bytes transferred (not content, just count)</li>
-                <li><strong>Wallet Address:</strong> Pseudonymous identifier (not linked to real identity)</li>
-                <li><strong>Subscription Status:</strong> Whether subscription is active</li>
-            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Purpose</th>
+                        <th>Storage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pseudonymous Wallet Address</strong></td>
+                        <td>Required for blockchain-based bandwidth billing and subscription management on the Sentinel network</td>
+                        <td>On-chain (Sentinel blockchain) — not linked to real identity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bandwidth Usage (bytes)</strong></td>
+                        <td>Fair usage accounting — only total byte count, not content</td>
+                        <td>On-chain (Sentinel blockchain)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Subscription Status</strong></td>
+                        <td>To verify whether your subscription plan is active</td>
+                        <td>On-chain (Sentinel blockchain) &amp; locally on device</td>
+                    </tr>
+                    <tr>
+                        <td><strong>App Preferences &amp; Settings</strong></td>
+                        <td>To remember your chosen protocol, DNS settings, theme, and kill switch preference</td>
+                        <td>Locally on device only (encrypted)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wallet Private Keys</strong></td>
+                        <td>To sign blockchain transactions for subscriptions</td>
+                        <td>Locally on device only — encrypted via Android Keystore</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Server/Node Cache</strong></td>
+                        <td>To provide faster connection times by caching available VPN node lists</td>
+                        <td>Locally on device only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anonymous Crash Reports</strong></td>
+                        <td>App stability improvement — contains no personally identifiable information</td>
+                        <td>Google Play Console (automated by Google)</td>
+                    </tr>
+                </tbody>
+            </table>
             
             <div class="warning-box">
-                <strong>Note:</strong> Blockchain data is publicly auditable and immutable. However, it contains 
-                no personally identifiable information and cannot be linked to your real identity or browsing activity.
+                <strong>Blockchain Transparency:</strong> Sentinel blockchain data is publicly auditable and immutable. 
+                However, wallet addresses are pseudonymous — they cannot be linked to your real identity, browsing 
+                activity, or any personal information without information that only you possess (your private key).
             </div>
             
-            <h2>5. Local Device Storage</h2>
-            <p>The App stores the following data locally on your device:</p>
-            <ul>
-                <li><strong>Settings:</strong> Your preferences (protocol, DNS, kill switch settings)</li>
-                <li><strong>Wallet Keys:</strong> Encrypted using Android Keystore</li>
-                <li><strong>Server Cache:</strong> List of available servers for faster connections</li>
-            </ul>
+            <!-- Section 5: VPN Service -->
+            <h2>5. VPN Service &amp; Network Traffic</h2>
             <p>
-                This data never leaves your device and is deleted when you uninstall the App or clear app data.
+                NoLog VPN uses the android.net.VpnService Android system API to create a secure VPN tunnel. 
+                When the VPN is active:
+            </p>
+            <ul>
+                <li>All network traffic from your device is routed through an encrypted WireGuard tunnel to a Sentinel dVPN node</li>
+                <li>The VPN node decrypts the outer tunnel layer and forwards your traffic to the internet — it <strong>cannot</strong> see the content of HTTPS-encrypted traffic</li>
+                <li>We do <strong>not</strong> inspect, filter, modify, log, or store any traffic passing through the VPN tunnel</li>
+                <li>We do <strong>not</strong> inject advertisements, tracking scripts, or any content into your traffic</li>
+                <li>The VPN service runs as an Android Foreground Service with a persistent notification so you always know when it is active</li>
+            </ul>
+            
+            <h3>Permissions Used</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Why It's Needed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>INTERNET</strong></td>
+                        <td>Required to establish VPN tunnel connections and communicate with Sentinel network</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BIND_VPN_SERVICE</strong></td>
+                        <td>Android system permission required for any VPN application to create a secure tunnel</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FOREGROUND_SERVICE</strong></td>
+                        <td>To keep the VPN connection active and show a persistent notification while connected</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FOREGROUND_SERVICE_SPECIAL_USE</strong></td>
+                        <td>Required by Android 14+ for VPN foreground services</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POST_NOTIFICATIONS</strong></td>
+                        <td>To display VPN connection status notifications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+                        <td>Optional: To automatically reconnect VPN after device restart (if enabled by user)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Section 6: Third-Party Services -->
+            <h2>6. Third-Party Services</h2>
+            <p>
+                The App integrates the following third-party services. Each service has its own privacy practices:
             </p>
             
-            <h2>6. Third-Party Services</h2>
-            
-            <h3>Google AdMob (Advertising)</h3>
+            <h3>6.1 Google AdMob (Advertising)</h3>
             <p>
-                For free-tier users, we display advertisements through Google AdMob. AdMob may collect and use 
+                For free-tier users, we display advertisements through Google AdMob. Google AdMob may collect and process 
                 certain data for advertising purposes, including:
             </p>
             <ul>
-                <li><strong>Advertising ID:</strong> A resettable identifier used to serve relevant ads</li>
-                <li><strong>Device information:</strong> Device model, OS version, and screen size</li>
-                <li><strong>Ad interaction data:</strong> Which ads are displayed and clicked</li>
+                <li><strong>Advertising ID:</strong> A user-resettable identifier used to serve relevant ads</li>
+                <li><strong>Device information:</strong> Device model, operating system version, and screen size</li>
+                <li><strong>Ad interaction data:</strong> Information about which ads are displayed, viewed, and clicked</li>
+                <li><strong>IP address:</strong> Used by Google for approximate location-based ad targeting (country/region level)</li>
             </ul>
             <p>
-                This data is collected directly by Google and is subject to 
-                <a href="https://policies.google.com/privacy" style="color: var(--primary);">Google's Privacy Policy</a>. 
-                We do not have access to this data. You can opt out of personalized advertising in your device settings. 
-                Premium subscribers do not see any advertisements, and no advertising data is collected.
+                This data is collected and processed directly by Google, subject to 
+                <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and 
+                <a href="https://policies.google.com/technologies/partner-sites">Google's Partner Policy</a>. 
+                We do not have access to raw advertising data collected by Google.
             </p>
+            <p><strong>Your Choices:</strong></p>
+            <ul>
+                <li>You can opt out of personalized advertising in your Android device settings 
+                    (Settings &rarr; Google &rarr; Ads &rarr; "Opt out of Ads Personalization")</li>
+                <li>You can reset your Advertising ID at any time from device settings</li>
+                <li>Premium subscribers do not see advertisements, and no advertising-related data is collected for them</li>
+            </ul>
             
-            <h3>Google Play Billing</h3>
+            <h3>6.2 Google User Messaging Platform (UMP) — Consent Management</h3>
             <p>
-                If you purchase a subscription, payment is processed by Google Play. We only receive 
-                confirmation of subscription status, not your payment details.
+                We use Google's User Messaging Platform (UMP SDK) to manage advertising consent in compliance with 
+                GDPR, ePrivacy Directive, and other applicable privacy regulations. The UMP SDK:
             </p>
+            <ul>
+                <li>Displays a consent form to users in applicable regions (EU/EEA, UK) before showing personalized ads</li>
+                <li>Allows users to choose between personalized ads, non-personalized ads, or rejecting consent</li>
+                <li>Stores the user's consent choice locally on the device</li>
+            </ul>
             
-            <h3>Sentinel Network</h3>
+            <h3>6.3 Google Play Billing</h3>
             <p>
-                VPN traffic is routed through Sentinel dVPN nodes operated by independent community members. 
-                Node operators cannot see the content of your encrypted traffic.
+                If you purchase a premium subscription, payment processing is handled entirely by Google Play. 
+                We receive only the following from Google:
             </p>
-            
-            <h3>Crash Reporting</h3>
+            <ul>
+                <li>Subscription status (active/expired/cancelled)</li>
+                <li>Subscription plan type (monthly/annual)</li>
+                <li>Purchase token (a pseudonymous identifier for the transaction)</li>
+            </ul>
             <p>
-                We may receive anonymous crash reports through Google Play Console to improve app stability. 
-                These reports contain no personally identifiable information.
+                We do <strong>not</strong> receive or store your payment details, credit card numbers, billing address, 
+                or any other financial information. All payment data is governed by 
+                <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice">Google Payments Privacy Notice</a>.
             </p>
             
+            <h3>6.4 Sentinel Decentralized Network</h3>
+            <p>
+                VPN traffic is routed through community-operated Sentinel dVPN nodes. Important disclosures:
+            </p>
+            <ul>
+                <li>Node operators are independent entities — not our employees or contractors</li>
+                <li>Node operators can see encrypted tunnel traffic volume but <strong>cannot</strong> decrypt or inspect the content</li>
+                <li>The Sentinel blockchain records pseudonymous bandwidth accounting data</li>
+                <li>We have no control over individual node operators' practices beyond what Sentinel protocol enforces</li>
+            </ul>
+            <p>
+                For more information, visit the <a href="https://sentinel.co">Sentinel Network website</a>.
+            </p>
+            
+            <h3>6.5 Google Play Console — Crash Reporting</h3>
+            <p>
+                Google Play may automatically collect anonymous crash reports (ANR and crash stack traces) through 
+                Android Vitals. These reports contain:
+            </p>
+            <ul>
+                <li>Device model, OS version, app version</li>
+                <li>Stack traces of the crash (technical error information)</li>
+                <li>General performance metrics</li>
+            </ul>
+            <p>
+                These reports contain <strong>no</strong> personally identifiable information, browsing data, or VPN traffic content.
+            </p>
+            
+            <!-- Section 7: Data Security -->
             <h2>7. Data Security</h2>
-            <p>We implement industry-standard security measures:</p>
+            <p>We implement industry-standard and advanced security measures to protect your data:</p>
             <ul>
-                <li>WireGuard encryption (ChaCha20-Poly1305) for VPN tunnel</li>
-                <li>TLS 1.3 for all API communications</li>
-                <li>Android EncryptedSharedPreferences for sensitive local data</li>
-                <li>Android Keystore for cryptographic key storage</li>
+                <li><strong>VPN Tunnel Encryption:</strong> WireGuard protocol with ChaCha20-Poly1305 authenticated encryption</li>
+                <li><strong>API Communications:</strong> TLS 1.2+ (preferring TLS 1.3) for all network communications</li>
+                <li><strong>Local Sensitive Data:</strong> Android EncryptedSharedPreferences (AES-256-SIV + AES-256-GCM) for sensitive local storage</li>
+                <li><strong>Cryptographic Keys:</strong> Android Keystore hardware-backed storage for wallet private keys</li>
+                <li><strong>Transit Encryption:</strong> All data transmitted between the App and external services is encrypted in transit</li>
             </ul>
+            <p>
+                While we employ strong security measures, no method of electronic transmission or storage is 100% secure. 
+                We cannot guarantee absolute security but are committed to using commercially reasonable measures to protect your data.
+            </p>
             
-            <h2>8. Your Rights</h2>
-            <p>You have the right to:</p>
+            <!-- Section 8: Data Retention -->
+            <h2>8. Data Retention and Deletion</h2>
+            
+            <h3>8.1 Local Data (On Your Device)</h3>
             <ul>
-                <li><strong>Delete Local Data:</strong> Uninstall the app or clear app data</li>
-                <li><strong>Control Settings:</strong> Adjust privacy features in the app</li>
-                <li><strong>Disconnect:</strong> Stop using the service at any time</li>
-            </ul>
-            <p>
-                Since we don't collect personal data, there's nothing for us to delete, export, or modify 
-                on our end.
-            </p>
-            
-            <h2>9. Children's Privacy</h2>
-            <p>
-                NoLog VPN is not intended for children under 18. We do not knowingly collect information 
-                from children. If you believe a child has provided us with information, please contact us.
-            </p>
-            
-            <h2>10. dVPN Alliance</h2>
-            <p>
-                Sentinel is a founding member of the dVPN Alliance, committed to:
-            </p>
-            <ul class="check-list">
-                <li>Privacy as a fundamental human right</li>
-                <li>Open source, verifiable code</li>
-                <li>Distributed logs (no single point of collection)</li>
-                <li>Permissionless, censorship-resistant networks</li>
+                <li>App settings, wallet keys, and server cache are stored <strong>only on your device</strong></li>
+                <li>This data is retained until you uninstall the App, clear app data, or manually reset settings</li>
+                <li>Uninstalling the App permanently deletes all locally stored data</li>
             </ul>
             
-            <h2>11. Changes to This Policy</h2>
+            <h3>8.2 Blockchain Data</h3>
+            <ul>
+                <li>Bandwidth usage records and subscription data on the Sentinel blockchain are <strong>immutable</strong> by design</li>
+                <li>This data is pseudonymous and cannot be linked to your real identity</li>
+                <li>Blockchain data cannot be deleted due to the decentralized and immutable nature of blockchain technology</li>
+            </ul>
+            
+            <h3>8.3 Third-Party Data</h3>
+            <ul>
+                <li><strong>Google AdMob:</strong> Advertising data retention is governed by Google's data retention policies. 
+                    You can manage this through your Google Account settings</li>
+                <li><strong>Google Play Billing:</strong> Purchase records are retained by Google per their policies</li>
+                <li><strong>Crash Reports:</strong> Retained by Google Play Console per Google's standard retention periods</li>
+            </ul>
+            
+            <h3>8.4 How to Delete Your Data</h3>
+            <p>Since we do not collect personal data on our servers, data deletion is straightforward:</p>
+            <ol>
+                <li><strong>Local data:</strong> Uninstall the App or go to Android Settings &rarr; Apps &rarr; NoLog VPN &rarr; Clear Data</li>
+                <li><strong>Advertising data:</strong> Reset your Advertising ID in Android Settings &rarr; Google &rarr; Ads</li>
+                <li><strong>Google Play purchase records:</strong> Contact Google Play support directly</li>
+                <li><strong>Account deletion:</strong> NoLog VPN does not require account creation, so there is no account to delete</li>
+            </ol>
             <p>
-                We may update this Privacy Policy from time to time. We will notify you of significant 
-                changes through the App or by updating the "Last Updated" date.
+                If you have any questions about data deletion or wish to exercise your rights regarding data processed by 
+                our third-party partners, please contact us at 
+                <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a> and we will assist you.
             </p>
             
-            <h2>12. Contact Us</h2>
+            <!-- Section 9: International Data Transfers -->
+            <h2>9. International Data Transfers</h2>
             <p>
-                If you have questions about this Privacy Policy or our practices:
+                Due to the decentralized nature of the Sentinel network:
             </p>
             <ul>
-                <li>Email: <a href="mailto:privacy@nologvpn.com">privacy@nologvpn.com</a></li>
-                <li>Website: <a href="https://nologvpn.com">nologvpn.com</a></li>
+                <li>VPN traffic may be routed through nodes located in various countries worldwide</li>
+                <li>Sentinel blockchain data is distributed across a global network of validators</li>
+                <li>Google services (AdMob, Play Billing) may process data in jurisdictions outside your country of residence</li>
             </ul>
+            <p>
+                By using the App, you acknowledge that your data (limited to the types described in Section 4) may be 
+                processed in jurisdictions with different data protection laws than your own. We ensure that all data 
+                handling complies with this Privacy Policy regardless of where processing occurs.
+            </p>
+            
+            <!-- Section 10: Your Rights -->
+            <h2>10. Your Privacy Rights</h2>
+            <p>
+                Depending on your location, you may have certain rights regarding your personal data. We are committed 
+                to honoring these rights for all users.
+            </p>
+            
+            <h3>10.1 Rights for All Users</h3>
+            <ul>
+                <li><strong>Right to Information:</strong> This Privacy Policy provides transparent information about our data practices</li>
+                <li><strong>Right to Delete Local Data:</strong> Uninstall the app or clear app data at any time</li>
+                <li><strong>Right to Opt Out of Ads:</strong> Disable personalized advertising through device settings or upgrade to Premium</li>
+                <li><strong>Right to Disconnect:</strong> Stop using the VPN service at any time without penalty</li>
+                <li><strong>Right to Contact:</strong> Reach out to us with any privacy-related questions or concerns</li>
+            </ul>
+            
+            <h3>10.2 European Economic Area (EEA), UK, and Switzerland — GDPR</h3>
+            <p>
+                If you are located in the EEA, UK, or Switzerland, you have the following additional rights under the 
+                General Data Protection Regulation (GDPR):
+            </p>
+            <ul>
+                <li><strong>Right of Access:</strong> Request information about whether we process your personal data and obtain a copy</li>
+                <li><strong>Right to Rectification:</strong> Request correction of inaccurate personal data</li>
+                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of your personal data, subject to legal obligations</li>
+                <li><strong>Right to Restrict Processing:</strong> Request limited processing of your personal data</li>
+                <li><strong>Right to Data Portability:</strong> Receive your personal data in a structured, commonly used format</li>
+                <li><strong>Right to Object:</strong> Object to processing of your personal data for certain purposes</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for personalized advertising at any time through the UMP consent dialog or device settings</li>
+            </ul>
+            <p>
+                <strong>Legal Basis for Processing:</strong> We process limited data based on: (a) your consent (for personalized advertising via UMP consent flow), 
+                (b) contractual necessity (for providing the VPN service and subscription management), and 
+                (c) legitimate interests (for app stability and crash prevention).
+            </p>
+            <p>
+                To exercise any GDPR rights, contact us at <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a>. 
+                We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.
+            </p>
+            
+            <h3>10.3 California Residents — CCPA/CPRA</h3>
+            <p>
+                If you are a California resident, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) 
+                provide you with additional rights:
+            </p>
+            <ul>
+                <li><strong>Right to Know:</strong> You may request information about the categories and specific pieces of personal information we collect</li>
+                <li><strong>Right to Delete:</strong> You may request deletion of personal information we hold about you</li>
+                <li><strong>Right to Opt Out of Sale:</strong> We do <strong>NOT sell</strong> your personal information to third parties</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your privacy rights</li>
+            </ul>
+            <p>
+                <strong>Do Not Sell My Personal Information:</strong> NoLog VPN does not sell, rent, or trade your personal 
+                information to any third party for monetary or other valuable consideration. Google AdMob may use advertising 
+                data for ad targeting purposes as described in Section 6.1 — you can opt out of personalized advertising 
+                at any time through your device settings.
+            </p>
+            <p>
+                To exercise your CCPA/CPRA rights, contact us at <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a>. 
+                We will verify your identity and respond within 45 days.
+            </p>
+            
+            <h3>10.4 Other Jurisdictions</h3>
+            <p>
+                We comply with applicable data protection and privacy laws in all jurisdictions where the App is available. 
+                If your local laws provide additional rights beyond those listed above, we will honor them upon request.
+            </p>
+            
+            <!-- Section 11: Children's Privacy -->
+            <h2>11. Children's Privacy</h2>
+            <p>
+                NoLog VPN is <strong>not intended for use by children under the age of 18</strong>. We do not knowingly 
+                collect personal information from children under 18. The App is not directed at children and does not 
+                contain content designed for children.
+            </p>
+            <p>
+                If we become aware that a child under 18 has provided us with personal information, we will take steps 
+                to delete such information promptly. If you are a parent or guardian and believe your child has provided 
+                us with personal information, please contact us immediately at 
+                <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a>.
+            </p>
+            <p>
+                With respect to COPPA (Children's Online Privacy Protection Act), we do not knowingly collect personal 
+                information from children under 13 in the United States.
+            </p>
+            
+            <!-- Section 12: Do Not Track -->
+            <h2>12. "Do Not Track" Signals</h2>
+            <p>
+                Our App does not track users across third-party websites or services, so we do not respond to 
+                Do Not Track (DNT) signals. However, we respect your privacy choices as described in this Policy, 
+                including the ability to opt out of personalized advertising.
+            </p>
+            
+            <!-- Section 13: Changes -->
+            <h2>13. Changes to This Privacy Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time to reflect changes in our practices, technology, 
+                legal requirements, or other factors. When we make changes:
+            </p>
+            <ul>
+                <li>We will update the "Last Updated" and "Effective Date" at the top of this page</li>
+                <li>For significant changes, we will provide notice through the App (via an in-app notification or dialog)</li>
+                <li>Your continued use of the App after the effective date of the revised Privacy Policy constitutes acceptance of the changes</li>
+            </ul>
+            <p>
+                We encourage you to review this Privacy Policy periodically to stay informed about our data practices.
+            </p>
+            
+            <!-- Section 14: Contact -->
+            <h2>14. Contact Us</h2>
+            <p>
+                If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, 
+                please contact us:
+            </p>
+            <ul>
+                <li><strong>Developer:</strong> Bumin Altinbay</li>
+                <li><strong>Email:</strong> <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a></li>
+                <li><strong>Privacy Inquiries:</strong> <a href="mailto:buminaltinbay@gmail.com">buminaltinbay@gmail.com</a></li>
+            </ul>
+            <p>
+                We aim to respond to all privacy-related inquiries within 30 days.
+            </p>
+            <p>
+                For concerns about Google's data practices through AdMob or Play Services, you may also contact Google 
+                directly through their <a href="https://support.google.com/policies/troubleshooter/7575787">Privacy Troubleshooter</a>.
+            </p>
             
             <div class="highlight-box">
-                <strong>Open Source:</strong> Our code is open source. You can verify our privacy claims by 
-                reviewing the code yourself on GitHub.
+                <strong>Open Source Transparency:</strong> NoLog VPN is built on open source principles. The Sentinel dVPN protocol 
+                is open source and publicly auditable. You can verify the network's privacy claims by reviewing the Sentinel 
+                protocol source code at <a href="https://github.com/sentinel-official">github.com/sentinel-official</a>.
             </div>
         </main>
         
         <footer>
-            <p>&copy; 2026 NoLog VPN. All rights reserved.</p>
+            <p>&copy; 2026 NoLog VPN — Bumin Altinbay. All rights reserved.</p>
             <p>Built on <a href="https://sentinel.co">Sentinel Network</a></p>
+            <p style="margin-top: 10px; font-size: 0.85em;">
+                This Privacy Policy is provided in English. In case of any conflict between translated versions 
+                and the English version, the English version shall prevail.
+            </p>
         </footer>
     </div>
 </body>
