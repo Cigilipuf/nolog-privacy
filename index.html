@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NoLog VPN</title>
+    <style>
+        :root {
+            --primary: #6750A4;
+            --primary-dark: #4F378B;
+            --surface: #1C1B1F;
+            --on-surface: #E6E1E5;
+            --background: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--on-surface);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        h3 {
+            color: #CAC4D0;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background: rgba(103, 80, 164, 0.2);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box {
+            background: rgba(255, 180, 0, 0.1);
+            border-left: 4px solid #FFB400;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .check-list li {
+            list-style: none;
+            padding-left: 5px;
+        }
+        
+        .check-list li::before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .cross-list li {
+            list-style: none;
+            padding-left: 5px;
+        }
+        
+        .cross-list li::before {
+            content: "✗ ";
+            color: #F44336;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🛡️</div>
+            <h1>NoLog VPN</h1>
+            <p>Privacy Policy</p>
+            <p class="last-updated">Last Updated: February 1, 2026</p>
+        </header>
+        
+        <main>
+            <div class="highlight-box">
+                <strong>Our Promise:</strong> NoLog VPN is built on a "can't log" architecture, not just "won't log" promises. 
+                We've designed our system so that logging your activity is technically impossible.
+            </div>
+            
+            <h2>1. Introduction</h2>
+            <p>
+                NoLog VPN ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy 
+                explains our data practices for the NoLog VPN application ("App"), built on the Sentinel 
+                decentralized VPN network.
+            </p>
+            <p>
+                By using NoLog VPN, you agree to the practices described in this policy.
+            </p>
+            
+            <h2>2. Our "Can't Log" Architecture</h2>
+            <p>
+                Unlike traditional VPNs that promise not to log, NoLog VPN uses Sentinel's decentralized 
+                architecture where comprehensive logging is technically impossible:
+            </p>
+            <ul class="check-list">
+                <li>No single entity controls the entire network</li>
+                <li>Node operators only see encrypted traffic</li>
+                <li>No central server stores connection data</li>
+                <li>Even if one node is compromised, they only have partial, encrypted data</li>
+            </ul>
+            
+            <h2>3. Information We DO NOT Collect</h2>
+            <p>We do not collect, store, or process:</p>
+            <ul class="cross-list">
+                <li>Your real IP address</li>
+                <li>Browsing history or website visits</li>
+                <li>DNS queries</li>
+                <li>Connection timestamps with user identifiers</li>
+                <li>Personal information (name, email, phone)</li>
+                <li>Device identifiers or advertising IDs</li>
+                <li>Location data</li>
+                <li>Application usage patterns</li>
+            </ul>
+            
+            <h2>4. Information Stored on Blockchain</h2>
+            <p>
+                The Sentinel blockchain stores only the minimum data required for fair bandwidth billing:
+            </p>
+            <ul>
+                <li><strong>Bandwidth Used:</strong> Total bytes transferred (not content, just count)</li>
+                <li><strong>Wallet Address:</strong> Pseudonymous identifier (not linked to real identity)</li>
+                <li><strong>Subscription Status:</strong> Whether subscription is active</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>Note:</strong> Blockchain data is publicly auditable and immutable. However, it contains 
+                no personally identifiable information and cannot be linked to your real identity or browsing activity.
+            </div>
+            
+            <h2>5. Local Device Storage</h2>
+            <p>The App stores the following data locally on your device:</p>
+            <ul>
+                <li><strong>Settings:</strong> Your preferences (protocol, DNS, kill switch settings)</li>
+                <li><strong>Wallet Keys:</strong> Encrypted using Android Keystore</li>
+                <li><strong>Server Cache:</strong> List of available servers for faster connections</li>
+            </ul>
+            <p>
+                This data never leaves your device and is deleted when you uninstall the App or clear app data.
+            </p>
+            
+            <h2>6. Third-Party Services</h2>
+            
+            <h3>Google AdMob (Advertising)</h3>
+            <p>
+                For free-tier users, we display advertisements through Google AdMob. AdMob may collect and use 
+                certain data for advertising purposes, including:
+            </p>
+            <ul>
+                <li><strong>Advertising ID:</strong> A resettable identifier used to serve relevant ads</li>
+                <li><strong>Device information:</strong> Device model, OS version, and screen size</li>
+                <li><strong>Ad interaction data:</strong> Which ads are displayed and clicked</li>
+            </ul>
+            <p>
+                This data is collected directly by Google and is subject to 
+                <a href="https://policies.google.com/privacy" style="color: var(--primary);">Google's Privacy Policy</a>. 
+                We do not have access to this data. You can opt out of personalized advertising in your device settings. 
+                Premium subscribers do not see any advertisements, and no advertising data is collected.
+            </p>
+            
+            <h3>Google Play Billing</h3>
+            <p>
+                If you purchase a subscription, payment is processed by Google Play. We only receive 
+                confirmation of subscription status, not your payment details.
+            </p>
+            
+            <h3>Sentinel Network</h3>
+            <p>
+                VPN traffic is routed through Sentinel dVPN nodes operated by independent community members. 
+                Node operators cannot see the content of your encrypted traffic.
+            </p>
+            
+            <h3>Crash Reporting</h3>
+            <p>
+                We may receive anonymous crash reports through Google Play Console to improve app stability. 
+                These reports contain no personally identifiable information.
+            </p>
+            
+            <h2>7. Data Security</h2>
+            <p>We implement industry-standard security measures:</p>
+            <ul>
+                <li>WireGuard encryption (ChaCha20-Poly1305) for VPN tunnel</li>
+                <li>TLS 1.3 for all API communications</li>
+                <li>Android EncryptedSharedPreferences for sensitive local data</li>
+                <li>Android Keystore for cryptographic key storage</li>
+            </ul>
+            
+            <h2>8. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Delete Local Data:</strong> Uninstall the app or clear app data</li>
+                <li><strong>Control Settings:</strong> Adjust privacy features in the app</li>
+                <li><strong>Disconnect:</strong> Stop using the service at any time</li>
+            </ul>
+            <p>
+                Since we don't collect personal data, there's nothing for us to delete, export, or modify 
+                on our end.
+            </p>
+            
+            <h2>9. Children's Privacy</h2>
+            <p>
+                NoLog VPN is not intended for children under 18. We do not knowingly collect information 
+                from children. If you believe a child has provided us with information, please contact us.
+            </p>
+            
+            <h2>10. dVPN Alliance</h2>
+            <p>
+                Sentinel is a founding member of the dVPN Alliance, committed to:
+            </p>
+            <ul class="check-list">
+                <li>Privacy as a fundamental human right</li>
+                <li>Open source, verifiable code</li>
+                <li>Distributed logs (no single point of collection)</li>
+                <li>Permissionless, censorship-resistant networks</li>
+            </ul>
+            
+            <h2>11. Changes to This Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. We will notify you of significant 
+                changes through the App or by updating the "Last Updated" date.
+            </p>
+            
+            <h2>12. Contact Us</h2>
+            <p>
+                If you have questions about this Privacy Policy or our practices:
+            </p>
+            <ul>
+                <li>Email: <a href="mailto:privacy@nologvpn.com">privacy@nologvpn.com</a></li>
+                <li>Website: <a href="https://nologvpn.com">nologvpn.com</a></li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Open Source:</strong> Our code is open source. You can verify our privacy claims by 
+                reviewing the code yourself on GitHub.
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 NoLog VPN. All rights reserved.</p>
+            <p>Built on <a href="https://sentinel.co">Sentinel Network</a></p>
+        </footer>
+    </div>
+</body>
+</html>
